@@ -1,21 +1,22 @@
 {
     "compilerOptions": {
-        "target": "ES5",
-        "module": "ESNext",
-        "lib": ["es2017", "dom"],
-        "moduleResolution": "node",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "declaration": true,
-        "declarationDir": "./dist/types",
-        "outDir": "./dist",
-        "resolveJsonModule": true
+      "target": "ESNext",        // 推荐设置为 ESNext，如果你的环境支持
+      "module": "ESNext",        // 使用 ESNext 模块语法
+      "lib": ["es2017", "dom"],
+      "moduleResolution": "node",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "declaration": true,
+      "declarationDir": "./dist/types",
+      "outDir": "./dist",
+      "resolveJsonModule": true
     },
     "include": [
-        "src/**/*.ts"
+      "src/**/*.ts"
     ],
     "exclude": [
-        "node_modules"
+      "node_modules"
     ]
-}
+  }
+  
