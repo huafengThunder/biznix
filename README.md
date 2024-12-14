@@ -1,3 +1,4 @@
+- biznix（Biz + Trix）：表示“业务的工具”+“灵活”;主要用于JavaScript
 - 文件大致目录结构
 ```
     util-tool/
