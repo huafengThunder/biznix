@@ -16,7 +16,7 @@
     │   ├── object.test.js
     │   ├── json.test.js
 ```
-#### :building_construction:  安装使用（支持CommonJS、ESM、UMD）
+#### :building_construction:  安装(支持CommonJS、ESM、UMD)
 1. 
     ``` bash
     npm install biznix
