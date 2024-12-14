@@ -27,6 +27,10 @@ export default {
     deletePlugin({ targets: 'dist/*' }),  // 在构建前删除 dist 目录中的所有文件
     resolve(),  // 解析 node_modules 中的模块
     commonjs(),  // 转换 CommonJS 模块为 ES6
-    typescript({ tsconfig: './tsconfig.json' }),  // 使用 TypeScript 编译
+    // 使用 TypeScript 编译
+    typescript({
+      tsconfig: './tsconfig.json',
+      useTsconfigDeclarationDir: true, // 使用 tsconfig.json 中的 declarationDir
+    }),
   ],
 };
