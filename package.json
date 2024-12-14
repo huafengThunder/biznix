@@ -1,0 +1,34 @@
+{
+  "name": "util-tool",
+  "version": "1.0.0",
+  "description": "a javascript util tools",
+  "main": "dist/util-tool.cjs.js",
+  "module": "dist/util-tool.esm.js",
+  "umd": "dist/util-tool.umd.js",
+  "types": "dist/types/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=16.15.0"
+  },
+  "keywords": [
+    "utility",
+    "tools"
+  ],
+  "author": "lhf",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "rollup": "^4.28.1",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.7.2"
+  },
+  "volta": {
+    "node": "16.15.0"
+  }
+}
