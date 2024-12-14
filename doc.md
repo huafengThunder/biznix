@@ -1,6 +1,10 @@
 - npm发包流程
     - npm login
     - npm publish
+    - npm 包版本更新
+        - npm version patch   # 小版本更新
+        - npm version minor   # 次版本更新
+        - npm version major   # 主版本更新
 - task
     - 完成单元测试
     - 引入路径别名
