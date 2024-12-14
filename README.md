@@ -1,5 +1,5 @@
-- biznix（Biz + Trix）：表示“业务的工具”+“灵活”;主要用于TypeScript/JavaScript
-- 文件大致目录结构
+# biznix（Biz + Trix）：表示“业务的工具”+“灵活”;主要用于TypeScript/JavaScript
+## 文件大致目录结构
 ```
     biznix/
     ├── dist/               # 构建后的产物
@@ -15,9 +15,9 @@
     │   ├── object.test.js
     │   ├── json.test.js
 ```
-- 安装使用（支持CommonJS、ESM、UMD）
-    - npm install biznix
-    - 通过script脚本引入
-- 编写规范
-    - 文件名采用中划线
-    - 方法采用小驼峰
+## :building_construction:  安装使用（支持CommonJS、ESM、UMD）
+1. 
+    ``` bash
+    npm install biznix
+    ```
+2. 通过script脚本引入
