@@ -15,6 +15,9 @@
     │   ├── object.test.js
     │   ├── json.test.js
 ```
+- 安装使用（支持CommonJS、ESM、UMD）
+    - npm install biznix
+    - 通过script脚本引入
 - 编写规范
     - 文件名采用中划线
     - 方法采用小驼峰
