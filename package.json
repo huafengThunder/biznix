@@ -28,6 +28,7 @@
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "rollup": "^4.28.1",
+    "rollup-plugin-delete": "^2.1.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.7.2"
   },
