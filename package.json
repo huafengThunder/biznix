@@ -1,10 +1,10 @@
 {
-  "name": "util-tool",
+  "name": "biznix",
   "version": "1.0.0",
   "description": "a javascript util tools",
-  "main": "dist/util-tool.cjs.js",
-  "module": "dist/util-tool.esm.js",
-  "umd": "dist/util-tool.umd.js",
+  "main": "dist/biznix.cjs.js",
+  "module": "dist/biznix.esm.js",
+  "umd": "dist/biznix.umd.js",
   "types": "dist/types/index.d.ts",
   "type": "module",
   "scripts": {
@@ -21,7 +21,7 @@
   "author": "lhf",
   "repository": {
     "type": "git",
-    "url": "https://github.com/huafengThunder/util-tool.git"
+    "url": "https://github.com/huafengThunder/biznix.git"
   },
   "license": "ISC",
   "devDependencies": {
