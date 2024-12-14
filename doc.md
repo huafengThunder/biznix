@@ -1,0 +1,6 @@
+- npm发包流程
+    - npm login
+    - npm publish
+- task
+    - 完成单元测试
+    - 引入路径别名    
