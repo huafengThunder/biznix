@@ -14,4 +14,4 @@
 ## task
     - 引入单元测试✔️
     - 引入路径别名
-    - 引入Prettier和eslint
+    - 引入prettier和eslint
