@@ -1,12 +1,12 @@
 /**
- * 检查一个字符串是否是有效的 JSON 格式
- * @param {string} str - 要检查的字符串
- * @returns {boolean} - 如果字符串是有效的 JSON 格式，返回 true；否则返回 false
+ * Checks whether a given string is a valid JSON format.
+ * @param {string} jsonString - The string to check.
+ * @returns {boolean} - Returns true if the string is valid JSON; otherwise, false.
  */
-export function isValidJSON(str: string): boolean {
-  if (typeof str !== 'string') return false; // 确保输入是字符串
+export function isValidJSON(jsonString: string): boolean {
+  if (typeof jsonString !== 'string') return false; // Ensure the input is a string
   try {
-    JSON.parse(str);
+    JSON.parse(jsonString);
     return true;
   } catch {
     return false;
