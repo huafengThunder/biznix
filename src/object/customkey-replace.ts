@@ -1,5 +1,5 @@
-// 定义一个通用类型，用于支持对象或数组，处理嵌套结构
-type NestedObject = { [key: string]: any } | any[];
+type NestedObject = { [key: string]: any } | any[] | string | number | boolean | null | undefined;
+
 /**
  * 递归地替换对象或数组中的键名
  * @param obj - 要进行处理的对象或数组
@@ -10,19 +10,21 @@ export const customKeyReplace = (
   obj: NestedObject,
   keyMapper: (key: string) => string,
 ): NestedObject => {
+  // 处理基本类型和空值
+  if (obj === null || obj === undefined || typeof obj !== 'object') {
+    return obj;
+  }
+
   // 如果是数组，递归处理每个元素
   if (Array.isArray(obj)) {
     return obj.map((item) => customKeyReplace(item, keyMapper));
   }
 
   // 如果是对象，递归处理每个键
-  if (obj !== null && typeof obj === 'object') {
-    const newObj: NestedObject = {};
-    for (const [key, value] of Object.entries(obj)) {
-      const newKey = keyMapper(key);
-      newObj[newKey] = customKeyReplace(value, keyMapper);
-    }
-    return newObj;
+  const newObj: NestedObject = {};
+  for (const [key, value] of Object.entries(obj)) {
+    const newKey = keyMapper(key);
+    newObj[newKey] = customKeyReplace(value, keyMapper);
   }
-  return obj;
+  return newObj;
 };

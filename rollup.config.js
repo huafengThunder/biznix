@@ -2,6 +2,7 @@ import typescript from 'rollup-plugin-typescript2';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import deletePlugin from 'rollup-plugin-delete';  // 引入 rollup-plugin-delete 插件
+import terser from '@rollup/plugin-terser'; // 压缩插件
 
 export default {
   input: 'src/index.ts',  // 使用 TypeScript 作为入口
@@ -10,17 +11,20 @@ export default {
       file: 'dist/biznix.cjs.js',  // CommonJS 格式
       format: 'cjs',
       sourcemap: true,
+      plugins: [terser()]
     },
     {
       file: 'dist/biznix.esm.js',  // ES 模块格式
       format: 'esm',
       sourcemap: true,
+      plugins: [terser()]
     },
     {
       file: 'dist/biznix.umd.js',  // UMD 格式
       format: 'umd',
       name: 'Biznix',  // UMD 格式的全局变量名
       sourcemap: true,
+      plugins: [terser()]
     },
   ],
   plugins: [

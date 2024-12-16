@@ -1,22 +1,24 @@
 {
-    "compilerOptions": {
-      "target": "ESNext",        // 推荐设置为 ESNext，如果你的环境支持
-      "module": "ESNext",        // 使用 ESNext 模块语法
-      "lib": ["es2017", "dom"],
-      "moduleResolution": "node",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "declaration": true,
-      "declarationDir": "./dist/types",
-      "outDir": "./dist",
-      "resolveJsonModule": true
-    },
-    "include": [
-      "src/**/*.ts"
-    ],
-    "exclude": [
-      "node_modules"
-    ]
-  }
+  "compilerOptions": {
+    "target": "ESNext",        // 推荐设置为 ESNext，如果你的环境支持
+    "module": "ESNext",        // 使用 ESNext 模块语法
+    "lib": ["es2017", "dom"],
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    // @types/jest 会自动被包含在 types 中，但也可以显式地指定
+    "types": ["jest"]
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
   
