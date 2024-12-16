@@ -11,7 +11,7 @@ export const customKeyReplace = (
   keyMapper: (key: string) => string,
 ): NestedObject => {
   // 处理基本类型和空值
-  if (obj === null || obj === undefined || typeof obj !== 'object') {
+  if (obj === null || typeof obj !== 'object') {
     return obj;
   }
 
