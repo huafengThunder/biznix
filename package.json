@@ -1,6 +1,6 @@
 {
   "name": "biznix",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a javascript util tools",
   "main": "dist/biznix.cjs.js",
   "module": "dist/biznix.esm.js",
