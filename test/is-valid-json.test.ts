@@ -1,5 +1,4 @@
-// isValidJSON.test.ts
-import { isValidJSON } from '../src/json/is-valid-json';
+import { isValidJSON } from '@src/json/is-valid-json';
 
 describe('isValidJSON', () => {
   // 测试输入是有效 JSON 字符串的情况

@@ -1,4 +1,4 @@
-import { customKeyReplace } from '../src/object/customkey-replace'
+import { customKeyReplace } from '@src/object/customkey-replace'
 
 describe('customKeyReplace', () => {
   // 测试基本类型
