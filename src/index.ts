@@ -1,2 +1,2 @@
-export { customKeyReplace } from './object/customkey-replace';
-export { isValidJSON } from './json/is-valid-json';
+export { customKeyReplace } from '@src/object/customkey-replace';
+export { isValidJSON } from '@src/json/is-valid-json';

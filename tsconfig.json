@@ -12,7 +12,11 @@
     "outDir": "./dist",
     "resolveJsonModule": true,
     // @types/jest 会自动被包含在 types 中，但也可以显式地指定
-    "types": ["jest"]
+    "types": ["jest"],
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"]
+    }
   },
   "include": [
     "src/**/*.ts"

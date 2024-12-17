@@ -3,6 +3,10 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import deletePlugin from 'rollup-plugin-delete';  // 引入 rollup-plugin-delete 插件
 import terser from '@rollup/plugin-terser'; // 压缩插件
+import path from 'path';
+
+// 获取当前目录的路径
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 export default {
   input: 'src/index.ts',  // 使用 TypeScript 作为入口
@@ -27,6 +31,9 @@ export default {
       plugins: [terser()]
     },
   ],
+  alias: {
+    '@src': path.resolve(__dirname, 'src'),
+  },
   plugins: [
     deletePlugin({ targets: 'dist/*' }),  // 在构建前删除 dist 目录中的所有文件
     resolve(),  // 解析 node_modules 中的模块
