@@ -15,4 +15,4 @@
     - 引入单元测试✔️
     - 引入路径别名✔️
     - 单元测试引入路径别名✔️
-    - 引入prettier和eslint
+    - 引入 prettier 和 eslint
