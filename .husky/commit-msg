@@ -1,4 +1,3 @@
 #!/bin/sh
-echo "Commit-msg hook triggered" >> .husky/commit-msg.log
-echo "The file is: $1" >> .husky/commit-msg.log
-npx --no-install commitlint --edit $1 >> .husky/commit-msg.log 2>&1
+echo "Commit-msg hook triggered"
+npx --no-install commitlint --edit $1
