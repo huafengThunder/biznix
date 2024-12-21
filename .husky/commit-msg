@@ -1,0 +1,4 @@
+# .husky/commit-msg
+echo "Commit-msg hook triggered"
+echo "The file is: $1"
+npx --no-install commitlint --edit $1
