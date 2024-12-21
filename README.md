@@ -1,5 +1,5 @@
 ## biznix
-- （Biz + Trix）：表示“业务的工具”+“灵活”;主要用于TypeScript/JavaScript
+- （Biz + Trix）：表示“业务的工具”+“灵活”;主要用于TypeScript/JavaScript的工具库
 
 #### :building_construction:  安装(支持CommonJS、ESM、UMD)
 1. 
