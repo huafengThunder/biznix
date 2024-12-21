@@ -1,4 +1,5 @@
 #!/bin/sh
 
 # .husky/pre-commit
+echo "Pre-commit hook triggered"
 npx lint-staged
