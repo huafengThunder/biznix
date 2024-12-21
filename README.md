@@ -9,3 +9,5 @@
 2. 通过script脚本引入
 
 #### [API说明文档](https://github.com/huafengThunder/biznix/blob/master/api-description.md)
+
+#### [项目构成](https://github.com/huafengThunder/biznix/blob/master/doc.md)
