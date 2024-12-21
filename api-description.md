@@ -5,3 +5,9 @@
 #### json
 - isValidJSON
     - 判断是否是json
+#### process-type
+- isEmpty
+    - 判断给定值是否为空,多种类型(空字符串、undefined、null、NaN、空对象、空数组)判断
+#### date
+- isValidDate
+    - 判断一个值是否是一个日期格式(包括字符串格式日期)

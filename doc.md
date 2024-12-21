@@ -8,12 +8,36 @@
     - 本地npm包调试
         - npm link (将包链接到全局)
         - npm link biznix (需要调用的项目中使用该命令，能将本地的包链接到你的项目的 node_modules 目录。)
+        
 ## 编写规范
     - 文件名采用中划线
     - 方法采用小驼峰
+
 ## task
     - 引入单元测试✔️
     - src目录引入路径别名✔️
     - 单元测试文件引入路径别名✔️
     - src目录、单元测试文件引入 prettier 和 eslint✔️
     - 根据目录生成目录结构图,放在文档中
+
+#### 文件大致目录结构
+```
+    biznix/
+    ├── dist/                                   # 构建后的产物
+    │   ├── biznix.cjs.js                       # CommonJS 格式
+    │   ├── biznix.esm.js                       # ESM 格式
+    │   └── biznix.umd.js                       # UMD 格式（浏览器兼容）
+    ├── src/                                    # 源代码
+    │   ├── index.ts                            # 主入口文件
+    │   ├── object/                             # 对象工具函数集合
+    │   │   ├── customkey-replace.ts            # 遍历修改key
+    │   ├── json/                               # JSON工具函数集合
+    │   │   ├── is-valid-json.ts                # 判断是否是JSON
+    │   ├── ....
+    ├── test/                                   # 测试代码
+    │   ├── object/                             # 对象工具函数集合(单测)
+    │   │   ├── customkey-replace.test.js       # 遍历修改key(单测)
+    │   ├── json/                               # JSON工具函数集合(单测)
+    │   │   ├── is-valid-json.ts                # 判断是否是JSON(单测)
+    │   ├── ....
+```
