@@ -10,4 +10,4 @@
 
 #### [API说明文档](https://github.com/huafengThunder/biznix/blob/master/api-description.md)
 
-#### [项目构成](https://github.com/huafengThunder/biznix/blob/master/doc.md)
+#### [项目说明](https://github.com/huafengThunder/biznix/blob/master/doc.md)
