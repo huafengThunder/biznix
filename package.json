@@ -18,6 +18,9 @@
     "*.ts": "eslint --fix",
     "*.json": "prettier --write"
   },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
   "engines": {
     "node": ">=18.18.0"
   },
@@ -32,6 +35,8 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^9.17.0",
     "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-commonjs": "^28.0.1",
