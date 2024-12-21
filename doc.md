@@ -1,4 +1,5 @@
 ## npm发包流程
+    - npm run build
     - npm login
     - npm publish
     - npm 包版本更新
