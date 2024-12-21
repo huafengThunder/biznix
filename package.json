@@ -1,6 +1,6 @@
 {
   "name": "biznix",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a javascript util tools",
   "main": "dist/biznix.cjs.js",
   "module": "dist/biznix.esm.js",
@@ -10,7 +10,7 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
-    "prettier": "prettier --write \"src/**/*.{js,ts}\" \"test/**/*.{js,ts}\"" ,
+    "prettier": "prettier --write \"src/**/*.{js,ts}\" \"test/**/*.{js,ts}\"",
     "lint": "eslint \"src/**/*.{js,ts}\" \"test/**/*.{js,ts}\" --fix"
   },
   "engines": {
