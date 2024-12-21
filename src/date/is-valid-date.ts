@@ -1,3 +1,9 @@
+/**
+ * 检查给定的日期值是否有效。
+ *
+ * @param {string | Date | null | undefined} date - 要检查的日期，可以是字符串、Date 对象、null 或 undefined。
+ * @returns {boolean} 如果日期有效，则返回 true，否则返回 false。
+ */
 export function isValidDate(date: string | Date | null | undefined): boolean {
     // 如果是 null 或 undefined，返回 false
     if (date === null || date === undefined) {
