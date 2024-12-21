@@ -1,2 +1,2 @@
-# 运行 lint-staged
+# .husky/pre-commit
 npx lint-staged
