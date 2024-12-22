@@ -5,6 +5,12 @@
 #### json
 - isValidJSON
     - 判断是否是json
+- jsonToMap
+    - 只能正确处理json对象，所以需要提前判断。方法中就不做判断了；避免jsonToArray参与,职责过于复杂
+    - 目录下有更详细的文档
+- jsonToArray
+    - 只能正确处理json数组，所以需要提前判断。方法中就不做判断了；避免jsonToMap参与，职责过于复杂
+    - 目录下有更详细的文档
 #### process-type
 - isEmpty
     - 判断给定值是否为空,多种类型(空字符串、undefined、null、NaN、空对象、空数组)判断
