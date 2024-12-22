@@ -4,7 +4,7 @@ export { customKeyReplace } from '@src/object/customkey-replace'
 // json
 export { isValidJSON } from '@src/json/is-valid-json'
 export { jsonToMap } from '@src/json/json-to-map'
-export { jsonToArray } from '@src/json/json-to-map'
+export { jsonToArray } from '@src/json/json-to-array'
 
 // date
 export { isValidDate } from '@src/date/is-valid-date'

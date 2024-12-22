@@ -1,5 +1,4 @@
 import { jsonToMap } from '@src/json/json-to-map'
-import { jsonToArray } from '@src/json/json-to-map'
 
 describe('jsonToMap', () => {
     test('正确转换简单的JSON对象', () => {
@@ -55,31 +54,5 @@ describe('jsonToMap', () => {
         const result = jsonToMap(jsonString)
         expect(result.get('a')).toBeInstanceOf(Map)
         expect(result.get('a')?.get('c')).toEqual([1, 2, 3])
-    })
-})
-
-describe('jsonToArray', () => {
-    test('解析简单数组', () => {
-        const arrayString = '[1, "test", true, null]'
-        const result = jsonToArray(arrayString)
-        expect(result).toEqual([1, 'test', true, null])
-    })
-
-    test('解析嵌套数组', () => {
-        const arrayString = '[1, [2, 3], "test"]'
-        const result = jsonToArray(arrayString)
-        expect(result).toEqual([1, [2, 3], 'test'])
-    })
-
-    test('处理空数组', () => {
-        const arrayString = '[]'
-        const result = jsonToArray(arrayString)
-        expect(result).toEqual([])
-    })
-
-    test('解析布尔值和 null 的数组', () => {
-        const arrayString = '[true, false, null]'
-        const result = jsonToArray(arrayString)
-        expect(result).toEqual([true, false, null])
     })
 })
