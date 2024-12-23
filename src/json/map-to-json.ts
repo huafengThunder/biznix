@@ -1,41 +1,30 @@
-export function mapToJson(map: Map<any, any>): string {
-    const obj: Record<string, any> = {}
+import { arrayToJson } from '@src/json/array-to-json'
 
-    // 保证插入顺序
-    Array.from(map.entries()).forEach(([key, value]) => {
-        let jsonKey = key // 对于 Map 中的键，可以使用它本身作为键（假设是字符串或可以转换为字符串）
+/**
+ * 将 Map 对象还原为 JSON 字符串。
+ * 支持 Map 中的嵌套对象、数组及基础数据类型。
+ * @param {Map<string, any>} map - 需要还原的 Map 对象。
+ * @returns {string} 返回 JSON 字符串。
+ */
+export function mapToJson(map: Map<string, any>): string {
+    const jsonObject: Record<string, any> = {}
 
-        // 处理键为对象或其他复杂类型的情况
-        if (typeof key !== 'string') {
-            jsonKey = JSON.stringify(key)
-        }
-
-        // 对值进行递归转换
-        let jsonValue
+    // 遍历 Map 中的每个键值对
+    for (const [key, value] of map.entries()) {
         if (value instanceof Map) {
-            // 如果值是一个 Map，递归转换
-            jsonValue = mapToJson(value) // 递归调用转换函数
+            // 递归处理 Map 类型
+            jsonObject[key] = mapToJson(value)
         } else if (Array.isArray(value)) {
-            // 如果值是数组，递归处理数组
-            jsonValue = value.map((item) => {
-                if (item instanceof Map) {
-                    return mapToJson(item) // 如果数组元素是 Map，递归转换
-                } else if (Array.isArray(item)) {
-                    return mapToJson(new Map(item.map((i, idx) => [idx, i]))) // 如果数组元素是数组，递归转换
-                } else {
-                    return item // 否则直接返回元素
-                }
-            })
-        } else if (typeof value === 'object' && value !== null) {
-            // 如果值是对象，递归处理对象
-            jsonValue = mapToJson(new Map(Object.entries(value)))
-        } else {
-            // 否则直接使用原值（如基本类型或 null）
-            jsonValue = value
+            // 递归处理数组类型
+            jsonObject[key] = arrayToJson(value)
+        } else if (value === null) {
+            jsonObject[key] = null
+        } else if (typeof value === 'boolean' || typeof value === 'number' || typeof value === 'string') {
+            // 基础类型（布尔、数字、字符串）
+            jsonObject[key] = value
         }
+    }
 
-        obj[jsonKey] = jsonValue
-    })
-
-    return JSON.stringify(obj)
+    // 将结果转为 JSON 字符串并返回
+    return JSON.stringify(jsonObject)
 }
